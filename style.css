@@ -1,0 +1,35 @@
+body {
+  background-image: url('your-background-image.jpg');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+p {
+  color: gray;
+  text-align: center;
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.styled-div,
+.nested-div {
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
