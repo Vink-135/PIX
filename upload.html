@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images | Pix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url("https://st4.depositphotos.com/2727515/19619/i/450/depositphotos_196191680-stock-photo-space-amazing-dark-theme-background.jpg") no-repeat center center/cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color:red; /* Semi-transparent red */
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 800px;
+            height: 400px;
+        }
+
+        .container h1 {
+            margin-bottom: 1rem;
+        }
+
+        .container p {
+            margin-bottom: 1.5rem;
+        }
+
+        .container input[type="file"] {
+            display: none;
+        }
+
+        .upload-label {
+            display: inline-block;
+            background-color: white;
+            color: #e60023;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            transform: translateY(30px);
+        }
+
+        .upload-label:hover {
+            background-color: #e60023;
+            color: white;
+        }
+
+        .reward {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transform: translateY(50px);
+
+        }
+
+        .reward span {
+            color: #ffd700; /* Gold color for rewards */
+        }
+
+        .success {
+            margin-top: 1rem;
+            color: #4caf50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Images</h1>
+        <p>Share your creativity and earn rewards!</p>
+        <form id="uploadForm">
+            <label for="fileUpload" class="upload-label">Choose Image</label>
+            <input type="file" id="fileUpload" accept="image/*">
+            <div class="success" id="successMessage"></div>
+        </form>
+        <div class="reward">
+            Earn <span>10 points</span> for every upload!
+        </div>
+    </div>
+
+    <script>
+        const fileUpload = document.getElementById('fileUpload');
+        const successMessage = document.getElementById('successMessage');
+
+        fileUpload.addEventListener('change', function () {
+            if (fileUpload.files.length > 0) {
+                successMessage.textContent = 'Image uploaded successfully!';
+                alert('You earned 10 points for uploading an image!');
+            }
+        });
+    </script>
+</body>
+</html>
